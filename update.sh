@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo "The current working directory: $PWD"
+
+
+if [ -z ${PLUGIN_TAG} ]; then
+  PLUGIN_TAG="`cat .tags`"
+fi
+
+echo ${PLUGIN_TAG}
+
 if [ -z ${PLUGIN_NAMESPACE} ]; then
   PLUGIN_NAMESPACE="default"
 fi
